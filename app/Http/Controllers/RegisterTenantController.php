@@ -39,9 +39,10 @@ class RegisterTenantController extends Controller
             'crm_access' => 1,
         ]);
 
-        // 3. Tạo Organization
+        // 3. Tạo Organization và gán user_owner_id
         $organization = Organization::create([
             'name' => $request->company_name,
+            'user_owner_id' => $user->id, // <-- Đã thêm dòng này
         ]);
 
         // 4. Liên kết User và Organization
@@ -64,7 +65,7 @@ class RegisterTenantController extends Controller
         // ==========================================
 
         // 5. Kích hoạt sự kiện và Đăng nhập
-        event(new \Illuminate\Auth\Events\Registered($user));
+        event(new Registered($user));
         auth()->login($user);
 
         // 6. Chuyển hướng tới Dashboard
