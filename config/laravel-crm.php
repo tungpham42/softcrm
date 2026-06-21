@@ -179,7 +179,7 @@ return [
         'teams',
         'chat',
         'email-marketing',
-        'sms-marketing',
+        // 'sms-marketing',
         'features',
         'monitoring',
     ],
