@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'crm_owner' => env('LARAVEL_CRM_OWNER', ''),
+    'crm_owner' => env('LARAVEL_CRM_OWNER', 'tung.42@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
