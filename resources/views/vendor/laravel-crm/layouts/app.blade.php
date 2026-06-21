@@ -19,14 +19,14 @@
         {{-- Flatpickr  --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        
+
         <!-- Styles -->
         @livewireStyles
 
         @include('laravel-crm::layouts.partials.favicon')
     </head>
     <body class="font-sans antialiased bg-base-200">
-    
+
     <x-mary-nav sticky full-width>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -34,7 +34,7 @@
             </label>
             <x-mary-popover>
                 <x-slot:trigger>
-                    <a class="navbar-brand text-2xl font-extrabold" href="{{ url(route('laravel-crm.dashboard')) }}" @can('view crm updates')data-toggle="tooltip" data-placement="bottom" title="v{{ config('laravel-crm.version') }}"@endcan><img src="{{ asset('vendor/laravel-crm/img/laravel-crm-logo.png') }}" width="215" class="block dark:hidden" /> <img src="{{ asset('vendor/laravel-crm/img/laravel-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" /> </a>
+                    <a class="navbar-brand text-2xl font-extrabold" href="{{ url(route('laravel-crm.dashboard')) }}" @can('view crm updates')data-toggle="tooltip" data-placement="bottom" title="v{{ config('laravel-crm.version') }}"@endcan><img src="{{ asset('vendor/laravel-crm/img/softy-crm-logo.png') }}" width="215" class="block dark:hidden" /> <img src="{{ asset('vendor/laravel-crm/img/softy-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" /> </a>
                 </x-slot:trigger>
                 <x-slot:content>
                     Version {{ config('laravel-crm.version') }} <br>
@@ -50,7 +50,7 @@
                 </x-slot:content>
             </x-mary-popover>
         </x-slot:brand>
-        
+
         <x-slot:actions>
             {{--<x-mary-input icon="o-magnifying-glass" placeholder="Search..." />--}}
             {{--<x-mary-button label="Messages" icon="o-envelope" link="###" class="btn-ghost btn-sm" responsive />
@@ -58,7 +58,7 @@
             <x-mary-theme-toggle class="btn btn-ghost" />
             @if (class_exists('\Laravel\Jetstream\Jetstream') && Laravel\Jetstream\Jetstream::managesProfilePhotos())
                 <x-mary-avatar :image="auth()->user()->profile_photo_url" alt="{{ Auth::user()->name }}" />
-            @else    
+            @else
             <x-mary-dropdown label="{{ auth()->user()->name }}" class="btn-neutral btn-sm" right>
                 @if(Route::has('profile.show'))
                     <x-mary-menu-item href="{{ route('profile.show') }}" title="{{ __('Profile') }} ({{ __('Host') }})" />
@@ -74,12 +74,12 @@
                         <x-mary-menu-item href="{{ route('laravel-crm.logout') }}" @click.prevent="$root.submit();"  title="{{ __('Log Out') }}" />
                     </form>
             </x-mary-dropdown>
-            @endif    
+            @endif
         </x-slot:actions>
     </x-mary-nav>
-    
+
     <x-mary-main with-nav full-width>
-        
+
         <x-slot:sidebar drawer="main-drawer" collapsible class="bg-base-200">
 
             {{-- Activates the menu item when a route matches the `link` property --}}
@@ -179,7 +179,7 @@
                         <x-mary-menu-item title="{{ ucfirst(__('laravel-crm::lang.teams')) }}" icon="fas.users" link="{{ url(route('laravel-crm.teams.index')) }}" />
                     @endcan
                 @endhasteamsenabled
-                
+
                 <hr class="my-2 border-t-[length:var(--border)] border-base-content/10">
                 @hasfeaturesenabled
                     @can('view crm features')
@@ -188,7 +188,7 @@
                 @endhasfeaturesenabled
 
                 @hasmonitoringenabled
-                    
+
                     @can('view crm monitors')
                         <x-mary-menu-item title="{{ ucfirst(__('laravel-crm::lang.monitors')) }}" icon="fas.heartbeat" link="{{ url(route('laravel-crm.monitors.index')) }}" />
                     @endcan
@@ -254,7 +254,7 @@
             {{ $slot ?? null }}
         </x-slot:content>
     </x-mary-main>
-    
+
     <x-mary-toast />
 
     @stack('modals')

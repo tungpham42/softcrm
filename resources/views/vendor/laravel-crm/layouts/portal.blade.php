@@ -26,8 +26,8 @@
             <x-mary-nav sticky full-width>
                 <x-slot:brand>
                     <a href="{{ url('/') }}" class="navbar-brand">
-                        <img src="{{ asset('vendor/laravel-crm/img/laravel-crm-logo.png') }}" width="215" class="block dark:hidden" />
-                        <img src="{{ asset('vendor/laravel-crm/img/laravel-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" />
+                        <img src="{{ asset('vendor/laravel-crm/img/softy-crm-logo.png') }}" width="215" class="block dark:hidden" />
+                        <img src="{{ asset('vendor/laravel-crm/img/softy-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" />
                     </a>
                 </x-slot:brand>
 

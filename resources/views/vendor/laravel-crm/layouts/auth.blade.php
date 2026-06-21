@@ -24,8 +24,8 @@
         <div class="min-h-screen flex flex-col justify-center items-center p-4">
             <div class="mb-6">
                 <a href="{{ route('laravel-crm.login') }}">
-                    <img src="{{ asset('vendor/laravel-crm/img/laravel-crm-logo.png') }}" width="215" class="block dark:hidden" alt="CRM" />
-                    <img src="{{ asset('vendor/laravel-crm/img/laravel-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" alt="CRM" />
+                    <img src="{{ asset('vendor/laravel-crm/img/softy-crm-logo.png') }}" width="215" class="block dark:hidden" alt="CRM" />
+                    <img src="{{ asset('vendor/laravel-crm/img/softy-crm-dark-logo.png') }}" width="215" class="hidden dark:inline" alt="CRM" />
                 </a>
             </div>
 
